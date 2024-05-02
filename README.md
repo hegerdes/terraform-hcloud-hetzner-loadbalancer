@@ -1,28 +1,26 @@
-# terraform-hcloud-hetzner-node-pool terraform module
+# terraform-hcloud-hetzner-loadbalancer terraform module
 
-Terraform module which creates terraform-hcloud-hetzner-node-pool resources. The module can be found on the [terraform.io registry](https://registry.terraform.io/modules/hegerdes/hetzner-node-pool/hcloud/latest) or on [github](https://github.com/hegerdes/terraform-hcloud-hetzner-node-pool).
+Terraform module which creates terraform-hcloud-hetzner-loadbalancer resources. The module can be found on the [terraform.io registry](https://registry.terraform.io/modules/hegerdes/hetzner-loadbalancer/hcloud/latest) or on [github](https://github.com/hegerdes/terraform-hcloud-hetzner-loadbalancer).
 
 ## Usage
 
-See [`examples`](https://github.com/hegerdes/terraform-hcloud-hetzner-node-pool/tree/main/examples) directory for working examples to reference:
+See [`examples`](https://github.com/hegerdes/terraform-hcloud-hetzner-loadbalancer/tree/main/examples) directory for working examples to reference:
 
 ```hcl
-module "hetzner_node_pool" {
-  source = "hegerdes/terraform-hcloud-hetzner-node-pool/"
+module "hetzner_loadbalancer" {
+  source = "hegerdes/terraform-hcloud-hetzner-loadbalancer/"
 
-  size     = 1
-  name     = "example"
-  location = "fsn1"
-  tags     = {cloud = "true"}
+  location   = local.location
+  network_id = hcloud_network.example.id
+  name       = "minimal"
 }
 ```
-*NOTE:* Due to an [issue](https://github.com/hetznercloud/terraform-provider-hcloud/issues/911) in the hetzner terraform provider, it is currently not possible to set firewall ids via labels and via the `firewall_ids` input. Users have to decide for one of these methods.
 
 ## Examples
 
-Examples codified under the [`examples`](https://github.com/hegerdes/terraform-hcloud-hetzner-node-pool/tree/main/examples) are intended to give users references for how to use the module(s) as well as testing/validating changes to the source code of the module. If contributing to the project, please be sure to make any appropriate updates to the relevant examples to allow maintainers to test your changes and to keep the examples up to date for users. Thank you!
+Examples codified under the [`examples`](https://github.com/hegerdes/terraform-hcloud-hetzner-loadbalancer/tree/main/examples) are intended to give users references for how to use the module(s) as well as testing/validating changes to the source code of the module. If contributing to the project, please be sure to make any appropriate updates to the relevant examples to allow maintainers to test your changes and to keep the examples up to date for users. Thank you!
 
-- [Complete](https://github.com/hegerdes/terraform-hcloud-hetzner-node-pool/tree/main/examples/complete)
+- [Complete](https://github.com/hegerdes/terraform-hcloud-hetzner-loadbalancer/tree/main/examples/complete)
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
@@ -78,4 +76,4 @@ No modules.
 
 ## License
 
-Apache-2.0 Licensed. See [LICENSE](https://github.com/hegerdes/terraform-hcloud-hetzner-node-poolblob/main/LICENSE).
+Apache-2.0 Licensed. See [LICENSE](https://github.com/hegerdes/terraform-hcloud-hetzner-loadbalancer/main/LICENSE).
