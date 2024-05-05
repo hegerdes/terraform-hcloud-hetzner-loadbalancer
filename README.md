@@ -28,13 +28,13 @@ Examples codified under the [`examples`](https://github.com/hegerdes/terraform-h
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5 |
-| <a name="requirement_hcloud"></a> [hcloud](#requirement\_hcloud) | 1.45.0 |
+| <a name="requirement_hcloud"></a> [hcloud](#requirement\_hcloud) | >=1.45.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_hcloud"></a> [hcloud](#provider\_hcloud) | 1.45.0 |
+| <a name="provider_hcloud"></a> [hcloud](#provider\_hcloud) | >=1.45.0 |
 
 ## Modules
 
@@ -44,10 +44,10 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [hcloud_load_balancer.this](https://registry.terraform.io/providers/hetznercloud/hcloud/1.45.0/docs/resources/load_balancer) | resource |
-| [hcloud_load_balancer_network.this](https://registry.terraform.io/providers/hetznercloud/hcloud/1.45.0/docs/resources/load_balancer_network) | resource |
-| [hcloud_load_balancer_service.this](https://registry.terraform.io/providers/hetznercloud/hcloud/1.45.0/docs/resources/load_balancer_service) | resource |
-| [hcloud_load_balancer_target.this](https://registry.terraform.io/providers/hetznercloud/hcloud/1.45.0/docs/resources/load_balancer_target) | resource |
+| [hcloud_load_balancer.this](https://registry.terraform.io/providers/hetznercloud/hcloud/latest/docs/resources/load_balancer) | resource |
+| [hcloud_load_balancer_network.this](https://registry.terraform.io/providers/hetznercloud/hcloud/latest/docs/resources/load_balancer_network) | resource |
+| [hcloud_load_balancer_service.this](https://registry.terraform.io/providers/hetznercloud/hcloud/latest/docs/resources/load_balancer_service) | resource |
+| [hcloud_load_balancer_target.this](https://registry.terraform.io/providers/hetznercloud/hcloud/latest/docs/resources/load_balancer_target) | resource |
 
 ## Inputs
 
